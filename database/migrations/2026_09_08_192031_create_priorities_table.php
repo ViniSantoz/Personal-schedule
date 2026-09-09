@@ -6,20 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('priorities', function (Blueprint $table) {
             $table->id();
+            $table->string('nome'); // ex: Baixa, Média, Alta, Urgente
+            $table->unsignedTinyInteger('nivel'); // ex: 1, 2, 3, 4 (para ordenação)
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('priorities');
