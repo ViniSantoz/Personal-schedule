@@ -10,9 +10,9 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('cor', 7)->nullable(); // ex: #FF5733
-            $table->text('descricao')->nullable();
+            $table->string('name');
+            $table->string('color', 7)->nullable(); // e.g. #FF5733
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

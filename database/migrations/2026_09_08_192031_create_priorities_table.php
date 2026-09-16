@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('priorities', function (Blueprint $table) {
             $table->id();
-            $table->string('nome'); // ex: Baixa, Média, Alta, Urgente
-            $table->unsignedTinyInteger('nivel'); // ex: 1, 2, 3, 4 (para ordenação)
+            $table->string('name'); // e.g. Low, Medium, High, Urgent
+            $table->unsignedTinyInteger('level'); // e.g. 1, 2, 3, 4 (for ordering)
             $table->timestamps();
         });
     }

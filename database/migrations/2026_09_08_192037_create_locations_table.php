@@ -10,10 +10,10 @@ return new class extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('endereco')->nullable();
-            $table->enum('tipo', ['presencial', 'online'])->default('presencial');
-            $table->string('link')->nullable(); // link de reunião, se for online
+            $table->string('name');
+            $table->string('address')->nullable();
+            $table->enum('type', ['in_person', 'online'])->default('in_person');
+            $table->string('link')->nullable(); // meeting link, if online
             $table->timestamps();
         });
     }
