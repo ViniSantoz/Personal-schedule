@@ -12,7 +12,7 @@ class PriorityController extends Controller
      */
     public function index()
     {
-        $priority = Priority::all();
+        $priorities = Priority::all();
         return view ('priorities.index', compact('priorities'));
     }
 

@@ -1,4 +1,4 @@
-<x-layouts.app :heading="__('Prioridades')">
+<x-layouts::app :heading="__('Prioridades')">
     <div class="max-w-3xl mx-auto py-6">
 
         <div class="flex items-center justify-between mb-6">
@@ -56,8 +56,5 @@
             </table>
         </div>
 
-        <div class="mt-4">
-            {{ $priorities->links() }}
-        </div>
     </div>
-</x-layouts.app>
+</x-layouts::app>

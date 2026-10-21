@@ -1,20 +1,18 @@
+
+
+
 @csrf
-<p>
-    <label for="name">Nome</label><br>
-    <input type="text" id="name" name="name"
-        value="{{ old('nome', $category->name ?? '') }}" required maxlength="100">
-</p>
+<flux:input name="name" label="Name" :value="old('name', $category->name ?? '')" required maxlength="100" />
 @error('name')
-    <p role="alert">{{ $message }}</p>
+    <p role="alert" class="text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
 @enderror
 
-<p>
-    <label for="description">Descrição (opcional)</label><br>
-    <textarea id="description" name="description" rows="4" cols="40" maxlength="1000">{{ old('description', $category->description ?? '') }}</textarea>
-</p>
+<flux:textarea name="description" label="description (opcional)" rows="4" maxlength="1000">{{ old('description', $category->description ?? '') }}</flux:textarea>
 @error('description')
-    <p role="alert">{{ $message }}</p>
+    <p role="alert" class="text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
 @enderror
 
-<button type="submit">Salvar</button>
-<a href="{{ route('categories.index') }}">Cancelar</a>
+<div class="flex items-center gap-4">
+    <flux:button type="submit" variant="primary">Salvar</flux:button>
+    <a class="underline" href="{{ route('categorias.index') }}">Cancelar</a>
+</div>

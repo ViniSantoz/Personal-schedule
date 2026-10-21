@@ -1,7 +1,8 @@
 <x-layouts::app title="Editar categoria">
-    <section lang="pt-BR">
-        <h1>Editar categoria</h1>
-        <form action="{{ route('categories.update', $category) }}" method="POST">
+    <section lang="pt-BR" class="mx-auto w-full max-w-4xl space-y-6">
+        <h1 class="text-2xl font-semibold">Editar categoria</h1>
+
+        <form action="{{ route('categories.update', $category) }}" method="POST" class="space-y-4">
             @method('PUT')
             @include('categories.form')
         </form>

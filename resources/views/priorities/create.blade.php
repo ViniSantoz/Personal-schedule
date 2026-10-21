@@ -1,4 +1,4 @@
-<x-layouts.app :heading="__('Nova prioridade')">
+<x-layouts::app :heading="__('Nova prioridade')">
     <div class="max-w-lg mx-auto py-6">
         <h1 class="text-xl font-medium mb-6">Nova prioridade</h1>
 
@@ -16,4 +16,4 @@
             </div>
         </form>
     </div>
-</x-layouts.app>
+</x-layouts::app>
